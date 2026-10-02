@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Firmas de correo</title>
+<style>
+:root{--bg:#f3f4f5;--card:#fff;--ink:#14171a;--mut:#697077;--line:#e1e4e7}
+@media(prefers-color-scheme:dark){:root{--bg:#0c0d0e;--card:#16181a;--ink:#eceff1;--mut:#8b9298;--line:#26292c}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);padding:40px 20px;
+ font:15px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+.w{max-width:880px;margin:0 auto}
+h1{font-size:28px;letter-spacing:-.02em;margin:0 0 6px}
+p.l{color:var(--mut);margin:0 0 24px;max-width:62ch}
+.warn{border-left:3px solid #F9E400;background:var(--card);padding:12px 16px;
+ border-radius:0 8px 8px 0;margin-bottom:26px}
+.g{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.c{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;text-align:center}
+.box{background:repeating-conic-gradient(#8884 0% 25%,transparent 0% 50%) 50%/16px 16px;
+ border-radius:8px;padding:14px;display:flex;align-items:center;justify-content:center;min-height:124px}
+img{max-width:100%;display:block}
+code{font:12px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:var(--mut);
+ word-break:break-all;display:block;margin-top:10px}
+</style></head><body><div class="w">
+<h1>Firmas de correo</h1>
+<p class="l">Assets de las firmas de Marcos Casas y Dopamina. El fondo a cuadros marca la transparencia.</p>
+<div class="warn"><b>No borrar ni renombrar.</b> Las firmas de Gmail apuntan a estas URLs. Si un archivo desaparece, la firma se rompe en todos los mails ya enviados.</div>
+<div class="g" id="g"></div></div>
+<script>
+const F=["avatar-director","avatar-dopamina","avatar-dev","avatar-producciones",
+"avatar-personal-a","avatar-personal-b","seal-cian","seal-amarillo"];
+document.getElementById("g").innerHTML=F.map(f=>
+'<div class="c"><div class="box"><img src="img/'+f+'.png" alt="'+f+'"></div><code>img/'+f+'.png</code></div>').join("");
+</script></body></html>
